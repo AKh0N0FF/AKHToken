@@ -1,20 +1,4 @@
 pragma solidity ^0.5.7;
-
-import "./ERC20Standard.sol";
-
-contract NewToken is ERC20Standard {
-	constructor() public {
-		totalSupply = 120000;
-		name = "AKH";
-		decimals = 4;
-		symbol = "AKH";
-		version = "1.0";
-		balances[msg.sender] = totalSupply;
-	}
-}
-
-pragma solidity ^0.5.7;
-
 library SafeMath {
 
     function mul(uint256 a, uint256 b) internal pure returns (uint256) {
@@ -114,4 +98,15 @@ contract ERC20Standard {
 		address indexed _spender,
 		uint _value
 		);
+}
+
+contract NewToken is ERC20Standard {
+	constructor() public {
+		totalSupply = 123000;
+		name = "AKH";
+		decimals = 4;
+		symbol = "AKH";
+		version = "1.0";
+		balances[msg.sender] = totalSupply;
+	}
 }
